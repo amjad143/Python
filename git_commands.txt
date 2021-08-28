@@ -1,0 +1,179 @@
+git log
+git --version
+git help
+git help command
+git config
+git config --list
+git config --global user.name "AmjadKhan"
+git config --global user.email "amjad.pathan143@gmail.com"
+
+1.  Create a new new folder :
+----> cd "folder path" ==>"C:/Users/user/Desktop/FirstGitProject"
+---->upload git into the folder <git init>
+----> Check the status of the folder <git status>
+
+2.  Create a new file :
+--->to add a file ==> <touch hello_wold.py> <filename.py>
+--->to check ====> <ls>
+--->to track the file===> <git add file name> <git add hello_world.py>
+If any thing upload in the file again repete the proceses
+----> To add multiple files at once
+type all at once
+
+3. Changes that we made to the file  "snap shot of all files" :
+----> git commit -m "new message" <git commit -m "My first project using git..!">
+---to check the chages status of the file===> <git log>
+---->to check the changes of the previous files===> <git diff>
+---->removing files from the Git Repository
+----> to check list of files in the folder <git ls-files>
+---->to remove multiple files ===> <git rm> <file1.py><hellowrld.py>
+----> to remove folders from the file ==> <git rm -r> <directory name>
+
+4. Tagging : it displays last uploaded tag on your label github
+----> git tag <tagname>  ---->git tag "version1"
+---->to view ===> <git tag> <git tag --list>
+---->to search perticual tag ====> <git tag -l> <"filename"> <git tag -l "v1*">
+---->to add message to tag  ====> <git tag -a "filename" -m "message">
+                      ====> <git tag -a v2.2.1 -m "Descriptive message of this 2.2 tag">
+---->to see the messages ===> <git log>
+
+7. Objects :
+
+---->git show <tagname>  ---->git show v2.2.1
+
+8. Delete Tag :
+
+--->git tag --delete <filename> <git tag --delete v1.1.1>
+
+9. Unstage a stage file :  vi file1.py
+----->to restore file ===> <git restore --staged> <filename.py>
+
+
+
+GIT HUB:
+
+1. To upload a repository file from the git lab?
+--->open git : enter cd<directorypath>
+--->open git hub :  copy push link enter in Git
+--->open git : git push -u origin main
+The file will be treated as "Origin"
+
+2.  To check "Fetch & Push" in Git
+--->git remote
+---->git remote -v
+will gives you two link to "fetch" and "push"
+--->to "fetch" or "push"===>type "origin" add a link
+
+
+3.  To Develop others project into our Git account:
+
+---> search project into our git account  corona
+---> to add that project into our account click : Fork
+---> Click <AddFile><Create file> : Name a File
+---> Click <Commit a New File> <add new features>
+---> Click <commit new file>
+
+===> Once we Done if we "Create pull request" it will suggest to the original person
+
+
+Clone from Remote to Local Repository
+
+4.  To Add New Project to our desktop:
+---->Open project in our github account
+ex : corona
+----> Change : cd Desktop/
+---->git clone <add http adress>
+---->change directory to "Project Nane"
+    >cd corona/
+----> Check files <ls><file crated in our local git hub account>
+---->check repositories<changes that we made in our local git bash file>
+----->git status <check the modified file>
+----->git add <filename that we modified> <ex :feature_corona_solver.py>
+----->git commit -m "added new functionality to our file>
+
+3. To upload into our Github account
+
+--->git push origin master
+--->Refresh your Github account you will find your change file
+---> click on the "Open pull request" button
+---> click on the "Create pull requst" to send to orginal account
+
+
+4 . SSH Connection
+
+---> create a SSH key ==>open <GIT GUI>
+---> CLICK ON "HELP"--- Select shoe "SSH KEY"
+
+1.   GIT Branch
+
+----> Check <git status> which is in origin or not
+----> check the previous changes of the files <git diff>
+----> Add all the files at once <git add .>
+----> if you want add a comment <git commit -m "enter your message">
+----> check the status of the files that are conneted to the repository or not <git status>
+----> again if you want add a comment <git commit -m "message">
+----> push the files to the git hub  <git push origin main(github switch branch name)>
+
+2. Create a Branch:
+
+---->crete a new file <git branch "name of the file"> <git branch "descriptive_greetings">
+----> check the status is it up to date or not <git status>
+---->check the git branches file is present or not <git branch>
+
+====> <"name of the file">&<switch branch name has to be shown>
+----> change the "main" file to "new branch name" ==> <git checkout name of the file(descriptive_greetings)>
+----> check the list of the files <ls>
+a. 
+===> create a file that add to the branch <vi> + <new file.py>
+===> it will open the note pad enter your changes
+===> once finish press the ==> <a> <"esc"> + <shift+:> + <w> + <q>
+---> check the untracked files <git status>
+---> add the untracked files <git add greetings.py><original file>
+---> if you want add a comment to it <git commit -m "message">
+---> check the files <ls>
+===> if you want add another new file to the branch <vi> + <secondnew file.py>
+---> check the status <git status>
+---> add the untracked file <git add second new file.py>
+---> add a comment to that file < git commit -m "second new message">
+===> push the files the github <git push origin main> (you will get a up-to-date)
+---> add the newly created branch file to the origin <git push origin descriptive-greetings>
+
+b. To create a new added file three-way merge :
+
+===> Reloaded your github files will be uploaded <ls>
+--->T0 swich to original branch <git checkout main>
+---> Switch to the previously created "branch" <git checkout "branch_previously">
+---> to add a file in "old branch file" <vi new_filename.py>
+---> if you want add commit <git commit -m "message">
+---> if you add the file git add newfile.py
+--->switch to the main branch <git checkout main> <ls>
+--->If we have any "issues" in my previous file create branch <git checkout -b "newbranch name">
+---> type previous file name to replace codes <cat "previous_file".py>
+---> add that file to this "issue" branch <vi "previous_file".py> and edit the file
+---> check the git status the branch is added or not <git status> add and commit
+---> checkout to the master branch <git checkout main>
+---> add the isuue branch that we edited <git merge "name_issue">
+---->delete the merge branch <git branch -d "name_issue"> <ls>
+---> check the git status main <git status>
+---> add the new file to the main <vi "new_file".py>
+---> edit the new file <cat new_file.py>
+---> switch out the previous "old" branch <git checkout "thirdday_work">
+---> edit the new created file <vi new_file.py>
+---> git add the file to the old directory <git add new_file.py> <git add commit -m "m">
+---> switch to the main branch <git checkout main>
+---> merge the the previous branch to the main branch <git merge thirdday_work>
+---> to check the merge files type <git log -1>
+---> delete the old branch that previously created <git branch -d thirdday_work>
+
+
+
+
+
+
+
+
+
+
+
+
+
